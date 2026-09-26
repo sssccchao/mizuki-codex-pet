@@ -1,0 +1,19 @@
+工具：Codex 内置 image_gen，透明背景；在原精灵图上进行局部编辑。
+应用范围：正面头部与头发的外沿。已有脸部、异色眼、服装及移动帧从原文件保留。
+
++Edit Image 1: the EXISTING finished Codex pet sprite atlas for "弥月Mizuki", currently an 8-column x 11-row transparent sheet. Image 2 is an enlarged reference of its exact front-facing identity and scale. This is a LOCAL POLISH / EDGE CLEANUP edit, not a redesign.
+
+Primary user request: improve the contour edges of the FRONT-FACING chibi, especially the head and blonde hair, when she faces the screen.
+On rows 1,4,5,6,7,8,9,10,11, carefully clean the outer contour of bunny ears, headband, side hair and twin ponytails, and tidy the fringe. Give them an uninterrupted, clean dark warm-charcoal/brown pixel outline, about ONE logical pixel thick (2 final pixels). Make blonde hair edge pixel clusters deliberate and coherent: clean stair-step curves, readable separated pointed tufts, tidy ponytail tips, no scattered noisy stray pixels, no patchy missing contour, no fuzzy glow, no translucent light halo, no blur. Keep the interior blonde highlight/shadow color clusters controlled and clear near the contour. Refine each front-facing pose consistently so the contour weight does not flicker across animation.
+Keep the pixel-art aesthetic: crisp square pixel clusters, nearest-neighbor look, no smooth vector lines, no anti-aliased painterly edges. This is a tiny game sprite that must read cleanly on light AND dark desktops.
+Rows 2 and 3 (moving right / moving left) are already adequate and should be preserved.
+
+STRICT INVARIANTS:
+- Preserve the same hairstyle lengths and shapes, same overall head and ear size, same full-body silhouette proportions, pink-and-black maid outfit, bag, accessories, identity and cute expression in EACH frame.
+- Preserve each existing pose, gaze, blink and expression; do not invent poses or rearrange frames.
+- Preserve eye colors exactly: OPEN iris on VIEWER LEFT must stay lavender VIOLET; OPEN iris on VIEWER RIGHT must stay warm ROSE PINK. Never change either iris color or swap them. Do not turn pink eyes purple or violet eyes blue. Closed-lid frames remain closed. This heterochromia was already corrected and MUST remain.
+- Preserve body, dress, legs, shoes and their original artwork. Focus changes on head/hair edge quality.
+- Keep ALL 88 frame positions and the EXACT same 8 columns x 11 rows arrangement. Keep sprites inside their cells, on the same bottom baseline and with the same transparent padding.
+- Output dimensions ideally EXACTLY 1536 x 2288 pixels, with cells 192 x 208. No border, no grid lines, no text or labels.
+- Genuinely transparent alpha background, not white or gray or black painted background, no checkerboard drawn into the output. No decorative sparkle pixels or ground shadows.
+Deliver the full production sprite atlas after targeted edge cleanup.

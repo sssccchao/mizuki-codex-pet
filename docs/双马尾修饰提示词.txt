@@ -1,0 +1,18 @@
+弥月Mizuki — 双马尾修饰
+
+使用 Codex 内置图像编辑工具，参考现有宠物正面图和原角色头发裁切图。
+将生成的双马尾素材提取、对齐到现有动画帧，保留原来的脸部和异色眼，清理旧发辫边缘残留。
+
+实际图像编辑提示词：
+Edit Image 1, the existing transparent pixel-art chibi pet "弥月Mizuki". Image 2 is the ORIGINAL character's hairstyle reference and must govern the ponytail shape.
+The user explicitly says the current ponytails have too many unwanted pixels around them and no longer match the original character. Make a focused hairstyle correction that is clearly visible.
+
+CHANGE ONLY THE TWO LOW PONYTAIL BUNCHES BELOW THE SIDES OF HER BOBBED HAIR:
+Use Image 2 to restore LOW, WAVY, TAPERING twin ponytails tied with small pink bows near the lower cheeks/nape. Each ponytail should be a slender, coherent S-curved lock that flows downward beside the shoulder and ends in one or two deliberate pointed tapered tips. Keep the elegant flowing leaf-like curve of the original. Reduce the current fluffy round bulbous puffs: the ponytails should be noticeably less wide, much less bushy, with fewer lobes and only 2-3 broad readable hair sections. Clear transparent negative space must surround each clean contour.
+This is LOOSE WAVY HAIR, not woven braids, not two buns, not spherical pigtail puffs, not pom-poms. Do not add lots of little spikes, fringes, jagged fuzz or disconnected pixels. Remove all stray flecks around the ponytails. Give each ponytail a single clean warm-dark-brown pixel contour, with restrained ivory-blonde shading inside. No feathered halos, no blur, no noise. Preserve true visible square-pixel art.
+
+STRICT PRESERVATION:
+Keep the existing bob haircut framing the face, bangs, black bunny ears, white/pink frilled headband, bows, face, expression, exact eye identity (viewer LEFT VIOLET, viewer RIGHT ROSE PINK), head scale, chibi proportions, body, pink-black dress, arms, accessories and tiny shoes. Do not redesign the character or make the body taller. Do not sharpen or recolor her face.
+Keep the same frontal relaxed standing pose. Keep her feet on the existing baseline. Keep her entirely within the canvas.
+Genuinely TRANSPARENT alpha background. No painted background, no checkerboard, no text or watermarks.
+Deliver ONE polished complete front-facing pet sprite, ideally canvas 384 x 416, which can be normalized to a 192 x 208 Codex frame. Hair fidelity and clean ponytail silhouette are the priority.

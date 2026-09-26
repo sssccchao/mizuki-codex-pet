@@ -1,0 +1,51 @@
+工具：Codex 内置 image_gen，透明背景。
+
+主精灵图生成提示词
+Use case: stylized-concept, production pixel-art character animation sprite sheet.
+Asset type: a fully usable custom desktop pet sprite atlas for Codex, NOT a concept presentation.
+Input image 1 is ONLY the character identity/outfit reference, not a page to copy.
+
+Create a beautiful crisp pixel-art super-deformed chibi of the reference character. Preserve her signature ivory-blonde short bangs and two side ponytails, tall BLACK rabbit ears, white frilly maid-style headband with pink band and black/pink ribbons, violet iris on viewer LEFT and pink iris on viewer RIGHT, small pink heart hairclip on viewer right, sweet blushing face, pink blouse with puffy sleeves and white cuffs, black flared dress with pink hem and bows, heart brooch on chest black bow, black stockings and tiny black shoes, small pink crossbody bunny bag. Simplify accessories into clear pixel clusters. Cute wholesome round 2-head-tall proportions (head roughly 50% of height excluding ears), large expressive eyes, tiny body and short legs. Never tall fashion-illustration proportions. Keep SAME recognizable design, color palette, head scale and body scale in EVERY frame.
+
+Medium: authentic polished 16-bit game pixel art with square pixels on a consistent logical grid; pixel-cluster shading, limited coherent 28-color palette, dark charcoal outlines. No smooth illustration lines, no airbrushed shading, no blurry scaling, no lettering, no labels, no watermarks.
+Background: genuinely TRANSPARENT alpha. All space between sprites must be empty transparent, no checkerboard drawn into image, no ground, no grid lines, no background rectangles, no shadows around frames.
+
+EXACT TECHNICAL LAYOUT, very important:
+Output PNG canvas exactly 1536 pixels wide by 2288 pixels high.
+8 equally spaced columns and 11 equally spaced rows.
+Every cell is exactly 192 wide by 208 high. Row boundaries at y=0,208,416,624,832,1040,1248,1456,1664,1872,2080,2288. Column boundaries at x=0,192,384,576,768,960,1152,1344,1536.
+NO margins surrounding the atlas, NO gaps between cells, NO visible separators. Every sprite centered horizontally in ITS OWN cell, feet at local y=194. Black ear tips safely at local y=12 or lower. Whole character must stay inside x=14..178 and y=12..198 of its cell. Character including ears is about 174 pixels high; never crop ears, feet, ponytails, hands or accessories. Each cell contains exactly one full body sprite. Consistent bottom alignment except jump animation. Image contains 88 evenly spaced frame positions, not a collage.
+
+Rows from top to bottom, left-to-right animation:
+Row 1 / y=0: IDLE. 8 frames: relaxed smile; gentle breathing; eyes half-close; eyes fully closed blink; eyes reopen; slight ponytail sway; calm neutral; calm neutral. Minimal motion.
+Row 2 / y=208: MOVE RIGHT. 8 frames of continuous tiny walking/running cycle facing 3/4 toward screen RIGHT. Alternating short legs and arms, swinging blonde ponytails and bag. No translation within cells.
+Row 3 / y=416: MOVE LEFT. 8 frames of tiny walking/running cycle facing 3/4 toward screen LEFT. Keep hairstyle/accessories and heterochromia consistent.
+Row 4 / y=624: WAVE. 8 frames: right hand up; hand wave outward; hand wave inward; happy hand wave; happy hand wave; happy hand wave; lower hand; relaxed. The FIRST FOUR must form a readable wave cycle.
+Row 5 / y=832: JUMP. 8 frames: squat preparation; lift off 10 px; air with both little arms raised and feet 22 px higher; descend 10 px; happy landing; relaxed; relaxed; relaxed. The FIRST FIVE make a complete jump.
+Row 6 / y=1040: FAILED / SAD. 8 frames: surprised; ears droop slightly; worried brows; tiny tear; eyes close worried; small sigh; recover; gently sad. Retain cuteness; no disturbing elements.
+Row 7 / y=1248: WAITING FOR INPUT. 8 frames: head gently tilted; pondering finger near cheek; blink; small curious head tilt opposite; curious eyes; relaxed question expression; relaxed; relaxed. FIRST SIX form loop. No punctuation floating in cells.
+Row 8 / y=1456: RUNNING / THINKING. 8 frames: concentrated face with hands clasped near chest; eyes focus left; focus center; focus right; thoughtful blink; determined nod; relaxed; relaxed. FIRST SIX form loop. No computers or props.
+Row 9 / y=1664: REVIEW / READY. 8 frames: happy satisfied smile; hands clasped; pleased closed-eye smile; tiny proud nod; happy open eyes; return smile; relaxed; relaxed. FIRST SIX form loop.
+Row 10 / y=1872: LOOK DIRECTIONS 1-8. Same front standing full body, only eyes/head subtly follow direction; 8 cells gaze north, north-northeast, northeast, east-northeast, east, east-southeast, southeast, south-southeast.
+Row 11 / y=2080: LOOK DIRECTIONS 9-16. Same front standing full body, only eyes/head subtly follow direction; 8 cells gaze south, south-southwest, southwest, west-southwest, west, west-northwest, northwest, north-northwest.
+Draw all 11 rows and all 8 columns. Carefully preserve equal grid, consistent tiny chibi anatomy, reference identity and true alpha. Deliver only the production sprite atlas.
+
+异色眼修正提示词
+Edit Image 1, the attached generated 8-column 11-row chibi sprite atlas. Image 2 is the original character reference for the CORRECT EYE COLORS.
+Single targeted correction: make the character's HETEROCHROMIA correct, obvious and consistent in EVERY frame with open eyes. In the frontal original reference her iris on the VIEWER LEFT is PURPLE / LAVENDER VIOLET, and her iris on the VIEWER RIGHT is WARM ROSE PINK. Anatomically her right eye is violet and her left eye is pink.
+Use clearly vivid violet irises (lavender-purple, approximately #AE6EE8 with darker #7848AA) on screen-left and clearly warm pastel rose pink irises (approximately #F69AB6 with darker #CC698F) on screen-right. Black pupils and tiny white highlights. NOT blue, NOT cyan. NOT two purple eyes. NOT two pink eyes. Keep these iris colors even when she looks sideways; changing pupil gaze must NOT change the iris color or swap left and right. The walking frames are shallow three-quarter views with both eyes still visible: screen-left iris violet, screen-right iris warm rose pink. Closed blinking eyes are simply closed lids and do not require visible irises.
+Check each of the 88 frame positions individually for eye consistency.
+All other parts of Image 1 must remain unchanged: identical 8-column and 11-row atlas composition and sprite spacing, same cute pixel style, same black bunny ears, ivory-blonde twin ponytails, pink-and-black dress, white frilly maid headband, pink bag, expressions, animation poses, proportions and silhouettes. Maintain genuinely transparent alpha background. No drawn checkerboard, no text, no labels, no separators. Preserve the entire 11-row 8-column sheet with all sprites complete. Deliver only the corrected production sprite atlas.
+
+移动动作补充提示词
+Create a production animation sprite strip using the attached ORIGINAL CHARACTER reference, with the same cute chibi design as Image 2. Image 1 determines costume and eye identity; Image 2 is only a chibi shape/outfit example. Make ONLY EIGHT full-body tiny chibi sprites, in a clean 4 columns by 2 rows layout on a genuinely TRANSPARENT canvas. No background, text, grid, numbers or shadows.
+
+Critical character identity: ivory-blonde twin ponytails, BLACK rabbit ears, pink-and-white frilly maid headband with black/pink bows, pink blouse and puff sleeves, black short dress pink hem, black stockings and small shoes, little pink crossbody bunny bag. Very cute 2-head-tall proportions with big eyes and tiny round body. Genuine crisp pixel-art game character, visible square pixel clusters with clean outlines; warm ivory, charcoal, rose pink, violet palette.
+
+EYES ARE THE MAIN REQUIREMENT. NEVER change their identity during animation. EVERY SPRITE has TWO CLEARLY DIFFERENT eye iris colors, not the same color. VIEWER LEFT eye iris is saturated LAVENDER PURPLE (#A46BDB). VIEWER RIGHT eye iris is warm ROSE PINK (#F095B3). This applies to ALL EIGHT sprites. No blue irises. No pair of two purple eyes or two pink eyes. Keep both eyes visible in shallow three-quarter poses; turn only body and feet slightly, keep face near frontal so VIEWER LEFT stays violet, VIEWER RIGHT stays pink. Black pupil and white highlight inside each colored iris. This is the anatomical right eye violet, anatomical left eye pink, as in original reference. Clearly distinguish the purple and pink hues.
+
+Row 1 has FOUR frames of a walk cycle to the RIGHT: (1) right short leg forward, left arm forward; (2) legs together, arms neutral; (3) left leg forward, right arm forward; (4) legs together slight upward bob. Shallow three-quarter BODY to right but face almost frontal, BOTH eyes readable. Tiny ponytail and bag sway.
+Row 2 has FOUR frames of the same walk cycle to the LEFT: (1) left leg forward right arm forward; (2) legs together; (3) right leg forward left arm forward; (4) slight bob. Shallow three-quarter BODY to left, face near frontal, BOTH eyes readable.
+
+Uniform sprite size, identical head/body size in all eight frames. Each entire sprite including ears stays well within its cell with transparent margins, never cropped. Feet all same baseline, motion stays in place. Match reference outfit, sweet chibi appearance, pixel style. Keep exactly 4 columns and 2 rows of sprites.
+
